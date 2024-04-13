@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from .forms import SignUpForm
 
-#solved views problems
+#solved views problems 
 # Create your views here.
 def home(request):
     #login 
