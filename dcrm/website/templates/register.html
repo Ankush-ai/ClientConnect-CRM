@@ -6,7 +6,7 @@
 <h1>Register</h1>
 <br/>
 
-<form method="POST" action="">
+<form method="POST" action="{% url 'register' %}">
 	{% csrf_token %}
 	{% if form.errors %}
 			<div class="alert alert-warning alert-dismissible fade show" role="alert">
