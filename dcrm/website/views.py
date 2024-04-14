@@ -5,6 +5,7 @@ from .forms import SignUpForm
 from .models import Record
 
 
+#solved views problems 
 # Create your views here.
 def home(request):
 
