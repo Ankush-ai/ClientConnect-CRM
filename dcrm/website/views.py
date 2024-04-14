@@ -1,11 +1,15 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
-from .forms import SignUpForm
+from .forms import SignUpForm 
+from .models import Record
+
 
 #solved views problems 
 # Create your views here.
 def home(request):
+
+    records= Record.objects.all()
     #login 
     if request.method == 'POST':
         username = request.POST['username']
@@ -20,9 +24,8 @@ def home(request):
             messages.error(request,"There was an Error Logging In Please try again! ")
 
     else:
-         return render(request,'home.html',{})
 
-    
+         return render(request,'home.html',{'records':records})
 
 #lFor Future Use If required
 def login_user(request):
@@ -54,5 +57,6 @@ def register_user(request):
         return render(request,'register.html',{'form':form})
     
     return render(request,'register.html',{'form':form})
+
 
 

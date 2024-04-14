@@ -15,7 +15,12 @@
           <a class="nav-link" href="{% url 'logout' %}">Logout</a>
         </li>
 
+
         {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}">LogIn</a>
+        </li>
+        {% comment %} {% else %} {% endcomment %}
         <li class="nav-item">
           <a class="nav-link" href="{% url 'register' %}">Register</a>
         </li>
