@@ -1,2 +1,0 @@
-Django==3.2.12
-mysql-connector-python==8.0.28
